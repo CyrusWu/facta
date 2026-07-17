@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN" data-skin="dawn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facta · 事实 — DeFi 价值捕获终审</title>
+<style>
+  :root{--fire:#9C4A2E;--wood:#4F6B45;--gold:#A9822F;--radius:12px;
+    --font:-apple-system,"SF Pro Display","PingFang SC",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+  html[data-skin="dawn"]{--bg:#EDE4D3;--panel:#F4EEE1;--panel2:#E4D9C3;--ink:#2E2620;--dim:#7A6B54;--line:rgba(46,38,32,.15);--firec:#9C4A2E;--woodc:#4F6B45;--goldc:#8A6A26}
+  html[data-skin="dusk"]{--bg:#2E2620;--panel:#3A2F26;--panel2:#241D18;--ink:#EDE4D3;--dim:#A99B84;--line:rgba(237,228,211,.16);--firec:#C05A38;--woodc:#8AA06A;--goldc:#C09A44}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px;margin:0 auto;padding:28px 20px 60px}
+  .kick{font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--dim)}
+  h1{font-size:40px;font-weight:700;margin:6px 0 4px;letter-spacing:-.01em}
+  h1 .ne{color:var(--firec)}
+  .sub{color:var(--dim);max-width:620px;font-size:15px}
+  .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:18px 0}
+  .btn{font-family:var(--font);font-size:13px;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 13px;cursor:pointer}
+  .btn.on{background:var(--firec);color:#fff;border-color:var(--firec)}
+  input.search{font-family:var(--font);font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink);min-width:150px}
+  .funnel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:6px 0 20px}
+  .frow{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .flab{width:120px;flex:none;text-align:right;font-size:12.5px;color:var(--dim)}
+  .ftrack{flex:1}
+  .ffill{height:28px;border-radius:8px}
+  .fval{width:88px;flex:none;text-align:right;font-family:var(--mono);font-weight:500}
+  .grp{margin:22px 0 6px}
+  .grp h2{font-size:17px;margin:0}
+  .grp .gd{font-size:12.5px;color:var(--dim)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{text-align:left;font-weight:500;color:var(--dim);font-size:11.5px;padding:8px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+  td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr.row{cursor:pointer}
+  tr.row:hover td{background:var(--panel)}
+  .tk{font-weight:700}.nm{color:var(--dim);font-size:11.5px}
+  .g{display:inline-block;min-width:22px;text-align:center;font-weight:700;font-family:var(--mono);border-radius:6px;padding:2px 6px;font-size:13px}
+  .gA,.gB{background:rgba(79,107,69,.18);color:var(--woodc)}
+  .gC{background:rgba(169,130,47,.20);color:var(--goldc)}
+  .gD{background:rgba(122,107,84,.20);color:var(--dim)}
+  .gF{background:rgba(156,74,46,.16);color:var(--firec)}
+  .yl{font-family:var(--mono);font-weight:500}
+  .num{text-align:right;white-space:nowrap}
+  th.num{text-align:right}
+  .tbl{overflow-x:auto}
+  .up{color:var(--woodc)}.down{color:var(--firec)}.flat{color:var(--dim)}
+  .chip{display:inline-block;font-size:11px;background:var(--panel2);color:var(--ink);border-radius:6px;padding:1px 7px;margin:1px 3px 1px 0}
+  .chip.f{background:rgba(156,74,46,.14);color:var(--firec)}
+  .star{color:var(--goldc);font-weight:700}
+  .stale{font-size:11px;color:var(--goldc)}
+  .detail td{background:var(--panel)}
+  .detail .note{font-size:13px;line-height:1.6}
+  .detail .meta{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-top:6px}
+  .foot{margin-top:34px;border-top:1px solid var(--line);padding-top:12px;font-family:var(--mono);font-size:11px;color:var(--dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .warn{font-size:12px;color:var(--firec);margin:4px 0 0}
+  @media(max-width:640px){h1{font-size:30px}.flab{width:78px}.fval{width:66px}.hide-m{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kick" id="kick"><span style="color:var(--firec);font-weight:700">FACTA</span> · 事实 ｜ DeFi 价值捕获终审 · realized 口径 · 链上核验</div>
+  <h1>便宜 <span class="ne">≠</span> 买入</h1>
+  <div class="sub">DeFi 里真正“便宜且已兑现给持有人”的价值捕获，一只手数得完——90% 的便宜是“便宜有理由”或“便宜但钱不进你口袋”。评级先过 trust-gate / realized / 到手三道硬闸门，再按数字打分。</div>
+  <div class="warn" id="disc"></div>
+
+  <div class="funnel" id="funnel"></div>
+
+  <div class="bar">
+    <span style="font-size:12px;color:var(--dim)">分组</span>
+    <button class="btn on" data-group="bucket">便宜三分法</button>
+    <button class="btn" data-group="grade">按评级</button>
+    <button class="btn" data-group="track">按赛道</button>
+    <span style="width:10px"></span>
+    <button class="btn on" id="hideFail">藏掉不合格</button>
+    <button class="btn" id="realOnly">只看真兑现</button>
+    <button class="btn" id="starOnly">只看深研★</button>
+    <input class="search" id="q" placeholder="搜项目 / ticker">
+    <span style="flex:1"></span>
+    <button class="btn" id="skin">◑ 夜间</button>
+  </div>
+
+  <div id="hiddenNote" style="font-size:11.5px;color:var(--dim);margin:2px 0 10px"></div>
+  <div id="app"></div>
+
+  <div class="foot">
+    <div id="src"></div>
+    <div><span id="asof"></span> · <span style="color:var(--firec)">@Cyrusnothing</span></div>
+  </div>
+  <div class="foot" style="border-top:none;padding-top:2px">
+    <div><em>Facta, non verba</em>(行胜于言) · Powered by <a href="https://www.coingecko.com" style="color:inherit">CoinGecko</a> · 协议费用数据 <a href="https://defillama.com" style="color:inherit">DeFiLlama</a> · <a href="./methodology/v1/universal-gates.md" style="color:inherit">方法论(公开)</a></div>
+    <div style="max-width:520px;text-align:right">披露：作者持有加密资产（可能包含被评级标的）；本站为研究观点、非投资建议；错误将公开勘误。</div>
+  </div>
+</div>
+
+<script>
+const BUCKETS=[
+  ['cheap-executed','便宜 + 已兑现','真回购/销毁给全体，无需锁——最接近，但多数 realized 仍小'],
+  ['expensive-real','贵但真金白银','机制真、现金真，只是不便宜'],
+  ['cheap-trap','便宜有理由 = 价值陷阱','份额被碾 / 衰退 / 周期 / 补贴 / 收入归国库'],
+  ['not-in-pocket','便宜但钱不进你口袋','回购进金库/信托/再质押，或只给锁仓者'],
+  ['no-capture','不分钱 / 无可买','到 token = $0，或没有 token，或 trust-gate 崩'],
+];
+const GRADES=['A','B','C','D','F'];
+const POCKET={'burn-all':'全员 ✓','dividend-all':'全员 ✓','ve-locker':'须锁','staker':'须质押','treasury':'进金库 ✗','trust-hold':'进信托 ✗','discretionary':'裁量','none':'—'};
+const fmtUSD=n=>{n=+n||0;const a=Math.abs(n);if(a>=1e9)return '$'+(n/1e9).toFixed(2)+'B';if(a>=1e6)return '$'+(n/1e6).toFixed(1)+'M';if(a>=1e3)return '$'+(n/1e3).toFixed(0)+'K';return n?'$'+n:'—'};
+const fmtPrice=p=>{if(p==null)return '—';p=+p;const a=Math.abs(p);if(a>=100)return '$'+p.toFixed(2);if(a>=1)return '$'+p.toFixed(3);if(a>=0.01)return '$'+p.toFixed(4);if(a>=0.0001)return '$'+p.toFixed(6);return '$'+p.toExponential(2)};
+const pct=x=>(x*100).toFixed(1)+'%';
+let DATA=null, state={group:'bucket',hideFail:true,realOnly:false,starOnly:false,q:''};
+const isFail=r=>r.grade==='F'||r.cheapBucket==='no-capture'||['narrative','trap','no-token'].includes(r.verdict);
+
+fetch('./data/data.json').then(r=>r.json()).then(d=>{DATA=d;boot()}).catch(e=>{
+  document.getElementById('app').innerHTML='<p style="color:var(--firec)">读取 data.json 失败——请用静态服务器打开（npm run serve），file:// 会被浏览器拦。</p>';
+});
+
+function boot(){
+  document.getElementById('disc').textContent='⚠ '+DATA.meta.disclaimer;
+  document.getElementById('src').textContent='来源：'+DATA.meta.source;
+  document.getElementById('asof').textContent='数据 as-of '+DATA.meta.asOf+' · 判断层复核 '+DATA.meta.lastFullReview;
+  const f=DATA.meta.funnel, g=f.gross_fee;
+  document.getElementById('funnel').innerHTML=
+    frow('毛手续费','全行业/月','#C9B79A',g,g)+
+    frow('协议收入','扣掉给 LP','#B49A6B',f.protocol_revenue,g)+
+    frow('真到 token','持有人','var(--firec)',f.to_token,g)+
+    '<div style="text-align:right;font-size:12px;color:var(--firec);font-weight:500">≈ 全行业毛费的 '+pct(f.to_token_pct)+' 到 token</div>';
+  document.querySelectorAll('[data-group]').forEach(b=>b.onclick=()=>{state.group=b.dataset.group;document.querySelectorAll('[data-group]').forEach(x=>x.classList.toggle('on',x===b));render()});
+  document.getElementById('hideFail').onclick=e=>{state.hideFail=!state.hideFail;e.target.classList.toggle('on',state.hideFail);render()};
+  document.getElementById('realOnly').onclick=e=>{state.realOnly=!state.realOnly;e.target.classList.toggle('on',state.realOnly);render()};
+  document.getElementById('starOnly').onclick=e=>{state.starOnly=!state.starOnly;e.target.classList.toggle('on',state.starOnly);render()};
+  document.getElementById('q').oninput=e=>{state.q=e.target.value.toLowerCase();render()};
+  document.getElementById('skin').onclick=()=>{const h=document.documentElement;const n=h.dataset.skin==='dawn'?'dusk':'dawn';h.dataset.skin=n;document.getElementById('skin').textContent=n==='dawn'?'◑ 夜间':'◐ 日间'};
+  render();
+}
+function frow(lab,sub,color,val,max){const w=Math.max(4,val/max*100);
+  return '<div class="frow"><div class="flab">'+lab+'<br><span style="font-size:10.5px">'+sub+'</span></div><div class="ftrack"><div class="ffill" style="width:'+w+'%;background:'+color+'"></div></div><div class="fval">'+fmtUSD(val)+'</div></div>'}
+
+function render(){
+  let rows=DATA.projects.slice();
+  const failCount=rows.filter(isFail).length;
+  if(state.hideFail) rows=rows.filter(r=>!isFail(r));
+  document.getElementById('hiddenNote').textContent=state.hideFail?('已藏掉 '+failCount+' 个不合格（无捕获 / 无 token / trust-fail）——不浪费精力；取消“藏掉不合格”可展开'):'';
+  if(state.realOnly) rows=rows.filter(r=>['A','B','C'].includes(r.grade)&&r.holdersRevAnnual>0);
+  if(state.starOnly) rows=rows.filter(r=>r.shortlist);
+  if(state.q) rows=rows.filter(r=>(r.name+r.ticker+r.track).toLowerCase().includes(state.q));
+  let groups;
+  if(state.group==='bucket') groups=BUCKETS.map(([k,t,d])=>[t,d,rows.filter(r=>r.cheapBucket===k)]);
+  else if(state.group==='grade') groups=GRADES.map(g=>['评级 '+g,'',rows.filter(r=>r.grade===g)]);
+  else{const ts=[...new Set(rows.map(r=>r.track))];groups=ts.map(t=>[t,'',rows.filter(r=>r.track===t)])}
+  const app=document.getElementById('app');app.innerHTML='';
+  for(const [title,desc,rs] of groups){ if(!rs.length) continue;
+    const sec=document.createElement('div');
+    sec.innerHTML='<div class="grp"><h2>'+title+' <span style="color:var(--dim);font-weight:400;font-size:13px">·'+rs.length+'</span></h2>'+(desc?'<div class="gd">'+desc+'</div>':'')+'</div>'+table(rs);
+    app.appendChild(sec);
+  }
+  app.querySelectorAll('tr.row').forEach(tr=>tr.onclick=()=>{const d=tr.nextElementSibling;if(d&&d.classList.contains('detail'))d.style.display=d.style.display==='none'?'':'none'});
+}
+function table(rs){
+  let h='<div class="tbl"><table><thead><tr><th>项目</th><th class="num">价格</th><th class="num">市值</th><th class="num">年营收</th><th class="num">实际回购/年</th><th class="num">回购yield<br><span style="font-weight:400;color:var(--dim)">稳健口径</span></th><th>评级</th><th class="hide-m">verdict</th><th class="hide-m">到手?</th><th>复核</th></tr></thead><tbody>';
+  for(const r of rs){
+    const stale=r.needsReview?'<span class="stale">🚩需复核</span>':(r.staleDays>30?'<span class="stale">待复核 '+r.staleDays+'d</span>':'<span style="color:var(--dim);font-size:11px">'+r.lastVerified.slice(5)+'</span>');
+    h+='<tr class="row"><td><span class="tk">'+r.ticker+'</span>'+(r.shortlist?' <span class="star" title="值得深度尽调">★</span>':'')+'<br><span class="nm">'+r.name+'</span></td>'+
+      '<td class="num yl">'+fmtPrice(r.price)+'</td>'+
+      '<td class="num yl">'+fmtUSD(r.mcap)+'</td>'+
+      '<td class="num yl">'+fmtUSD(r.protocolRevAnnual)+'</td>'+
+      '<td class="num yl">'+fmtUSD(r.holdersRevAnnual)+'</td>'+
+      '<td class="num">'+yieldCell(r)+'</td>'+
+      '<td><span class="g g'+r.grade+'">'+r.grade+'</span></td>'+
+      '<td class="hide-m" style="font-size:12px">'+r.verdict+'</td>'+
+      '<td class="hide-m" style="font-size:12px">'+(POCKET[r.payout_destination]||'—')+'</td>'+
+      '<td>'+stale+'</td></tr>';
+    const win='7d/30d/1y '+(r.yield7d!=null?pct(r.yield7d):'—')+' / '+pct(r.yield30d)+' / '+(r.yield1y?pct(r.yield1y):'—');
+    h+='<tr class="detail" style="display:none"><td colspan="10"><div class="note">'+r.note+'</div>'+
+      (r.flags.length?'<div style="margin-top:6px">'+r.flags.map(f=>'<span class="chip f">'+f+'</span>').join('')+'</div>':'')+
+      (r.reasons&&r.reasons.length?'<div style="margin-top:4px;font-size:12px;color:var(--dim)">评级理由：'+r.reasons.join('；')+'</div>':'')+
+      '<div class="meta">窗口 '+win+' → 稳健 '+pct(r.yieldRobust)+(r.yieldPulse?' ⚡发散>2x':'')+' · 被动到手 '+pct(r.passiveYield)+(r.emissionAnnualPct!=null?' · 回购'+pct(r.yieldRobust)+'−排放'+pct(r.emissionAnnualPct)+'=净'+(r.netYield<0?'<span style="color:var(--firec)">'+pct(r.netYield)+'</span>':pct(r.netYield)):'')+' · FDV口径 '+pct(r.yieldFdv)+' · 机制 '+r.mechanism_type+' · 到手 '+(POCKET[r.payout_destination]||'—')+' · P/F '+ratio(r.mcap,r.grossFeeAnnual)+' · P/回购 '+ratio(r.mcap,r.holdersRevAnnual)+' · 毛费 '+fmtUSD(r.grossFeeAnnual)+'/yr · FDV '+fmtUSD(r.fdv)+
+      (r.onchainRefs&&r.onchainRefs.length?' · 链上：'+r.onchainRefs.join(' , '):'')+' · 核验 '+r.lastVerified+' · 数据 '+r.dataSource+'</div></td></tr>';
+  }
+  return h+'</tbody></table></div>';
+}
+function yieldCell(r){
+  const rob=r.yieldRobust!=null?r.yieldRobust:r.yield30d;
+  const arrow=r.yieldTrend==='up'?'<span class="up">↑</span>':r.yieldTrend==='down'?'<span class="down">↓</span>':'<span class="flat">→</span>';
+  const pulse=r.yieldPulse?' <span title="多窗口发散>2x，30d 不可信，已取稳健口径" style="color:var(--goldc);cursor:help">⚡</span>':'';
+  const parts=[];
+  if(Math.abs((r.yield30d||0)-rob)>0.005) parts.push('30d '+pct(r.yield30d));
+  if(!r.passiveAccessible && rob>0.005) parts.push('<span title="须锁/质押/或进金库，被动持有拿不到" style="color:var(--firec);cursor:help">被动到手 0</span>');
+  const sub=parts.length?'<div style="font-size:10.5px;color:var(--dim)">'+parts.join(' · ')+'</div>':'';
+  return '<span class="yl">'+pct(rob)+'</span> '+arrow+pulse+sub;
+}
+function ratio(m,d){return d>0?(m/d).toFixed(1)+'x':'—'}
+</script>
+</body>
+</html>
