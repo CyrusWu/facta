@@ -1,7 +1,7 @@
 {
  "meta": {
   "asOf": "2026-07-18",
-  "generatedAt": "2026-07-18T02:35:00.791Z",
+  "generatedAt": "2026-07-18T02:53:27.642Z",
   "source": "DeFiLlama (holders/revenue/fees) + CoinGecko (mcap/fdv); 失败回退 projects.json seed(2026-07-13实测)",
   "disclaimer": "高 yield% 常是分母造的或补贴堆的——本站评级已扣除，但仍是分析非投资建议。",
   "funnel": {
@@ -19,7 +19,7 @@
   },
   "handle": "@Cyrusnothing",
   "lastFullReview": "2026-07-13",
-  "publishedAt": "2026-07-18T02:35:00.857Z"
+  "publishedAt": "2026-07-18T02:56:00.502Z"
  },
  "projects": [
   {
