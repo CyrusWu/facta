@@ -1,7 +1,7 @@
 {
  "meta": {
   "asOf": "2026-07-18",
-  "generatedAt": "2026-07-18T02:26:36.057Z",
+  "generatedAt": "2026-07-18T02:35:00.791Z",
   "source": "DeFiLlama (holders/revenue/fees) + CoinGecko (mcap/fdv); 失败回退 projects.json seed(2026-07-13实测)",
   "disclaimer": "高 yield% 常是分母造的或补贴堆的——本站评级已扣除，但仍是分析非投资建议。",
   "funnel": {
@@ -19,7 +19,7 @@
   },
   "handle": "@Cyrusnothing",
   "lastFullReview": "2026-07-13",
-  "publishedAt": "2026-07-18T02:26:36.127Z"
+  "publishedAt": "2026-07-18T02:35:00.857Z"
  },
  "projects": [
   {
@@ -165,13 +165,13 @@
    ],
    "reasons": [],
    "shortlist": false,
-   "note": "~97%协议费自动买回HYPE=全DeFi唯一大额confirmed;但分配比例治理可改、yield在缩(1y5.7%→30d3.6%)、贵(P/F~19-33x)、FDV口径仅0.8%。对的资产贵的时机。",
+   "note": "~93-99%协议费自动买回HYPE=全DeFi唯一大额confirmed;但分配比例治理可改(2025-12核到一次上调97→99%部分费类)、季度回购四连降(API实算口径)、贵(P/F~19-33x)、FDV口径仅0.9%。AQA v2已通过(USDC储备收益→AF,+$135-160M/yr估算)但首笔2026-10-03才落账=announced非realized。对的资产贵的时机。",
    "onchainRefs": [
     "Assistance Fund(HyperCore系统地址,非EVM)"
    ],
-   "lastVerified": "2026-07-13",
+   "lastVerified": "2026-07-18",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 0,
    "needsReview": false,
    "hasProfile": true,
    "provenance": "seed快照"
