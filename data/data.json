@@ -1,7 +1,7 @@
 {
  "meta": {
-  "asOf": "2026-07-17",
-  "generatedAt": "2026-07-17T21:48:00.048Z",
+  "asOf": "2026-07-18",
+  "generatedAt": "2026-07-18T02:26:36.057Z",
   "source": "DeFiLlama (holders/revenue/fees) + CoinGecko (mcap/fdv); 失败回退 projects.json seed(2026-07-13实测)",
   "disclaimer": "高 yield% 常是分母造的或补贴堆的——本站评级已扣除，但仍是分析非投资建议。",
   "funnel": {
@@ -19,7 +19,7 @@
   },
   "handle": "@Cyrusnothing",
   "lastFullReview": "2026-07-13",
-  "publishedAt": "2026-07-17T22:09:48.098Z"
+  "publishedAt": "2026-07-18T02:26:36.127Z"
  },
  "projects": [
   {
@@ -72,8 +72,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -119,8 +120,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -169,8 +171,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": true,
    "provenance": "seed快照"
   },
   {
@@ -220,8 +223,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -274,8 +278,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -328,8 +333,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -382,8 +388,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -435,8 +442,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -489,8 +497,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -542,8 +551,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -590,8 +600,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -640,8 +651,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "manual",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "holders=人工估算·市场层live"
   },
   {
@@ -695,8 +707,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -750,8 +763,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -803,8 +817,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -856,8 +871,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -908,8 +924,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "manual",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "holders=人工估算·市场层live"
   },
   {
@@ -957,8 +974,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -1010,8 +1028,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -1060,8 +1079,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -1112,8 +1132,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -1169,8 +1190,9 @@
    ],
    "lastVerified": "2026-07-14",
    "dataSource": "seed",
-   "staleDays": 3,
+   "staleDays": 4,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -1218,8 +1240,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -1265,8 +1288,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -1314,8 +1338,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -1366,8 +1391,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -1413,8 +1439,9 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   },
   {
@@ -1473,8 +1500,9 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
+   "hasProfile": false,
    "provenance": "seed快照"
   }
  ]
