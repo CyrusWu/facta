@@ -1,7 +1,7 @@
 {
  "meta": {
-  "asOf": "2026-07-18",
-  "generatedAt": "2026-07-18T02:53:27.642Z",
+  "asOf": "2026-07-19",
+  "generatedAt": "2026-07-19T12:42:14.392Z",
   "source": "DeFiLlama (holders/revenue/fees) + CoinGecko (mcap/fdv); 失败回退 projects.json seed(2026-07-13实测)",
   "disclaimer": "高 yield% 常是分母造的或补贴堆的——本站评级已扣除，但仍是分析非投资建议。",
   "funnel": {
@@ -19,7 +19,7 @@
   },
   "handle": "@Cyrusnothing",
   "lastFullReview": "2026-07-13",
-  "publishedAt": "2026-07-18T02:56:00.502Z"
+  "publishedAt": "2026-07-19T12:42:45.095Z"
  },
  "projects": [
   {
@@ -72,7 +72,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -120,7 +120,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -171,7 +171,7 @@
    ],
    "lastVerified": "2026-07-18",
    "dataSource": "seed",
-   "staleDays": 0,
+   "staleDays": 1,
    "needsReview": false,
    "hasProfile": true,
    "provenance": "seed快照"
@@ -223,7 +223,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -278,7 +278,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -333,7 +333,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -388,7 +388,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -442,7 +442,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -497,7 +497,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -551,7 +551,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -600,61 +600,10 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
-  },
-  {
-   "slug": "aave",
-   "name": "Aave",
-   "ticker": "AAVE",
-   "track": "借贷",
-   "price": 90.09,
-   "yield30d": 0.0161,
-   "yield7d": null,
-   "yield1y": 0.021,
-   "yieldRobust": 0.0161,
-   "yieldPulse": false,
-   "yieldWindows": 2,
-   "yieldFdv": 0.0153,
-   "yieldTrend": "down",
-   "passiveYield": 0.0161,
-   "passiveAccessible": true,
-   "emissionAnnualPct": null,
-   "emissionSrc": null,
-   "emissionProv": null,
-   "netYield": null,
-   "netCaptureUsd": null,
-   "holdersRevAnnual": 22000000,
-   "protocolRevAnnual": 45000000,
-   "grossFeeAnnual": 351000000,
-   "mcap": 1367550967,
-   "fdv": 1441432312,
-   "mechanism_type": "immutable-auto",
-   "payout_destination": "burn-all",
-   "verdict": "partial",
-   "trust_gate": "pass",
-   "grade": "C",
-   "score": 47,
-   "cheapBucket": "cheap-executed",
-   "bucketLabel": "便宜 + 已兑现",
-   "flags": [
-    "媒体口径放大~16x",
-    "run-rate 在缩"
-   ],
-   "reasons": [],
-   "shortlist": true,
-   "note": "唯一便宜(P/F~4x)+不可逆+全员无需锁的蓝筹;但realized仅~1%(以代币计且在缩),新3.0引擎链上收入回购tx尚未坐实、DeFiLlama holders-rev=$0。媒体$402M是毛口径的1/13。深研=盯3.0是否真上链跑。",
-   "onchainRefs": [
-    "Collector V2 0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c"
-   ],
-   "lastVerified": "2026-07-13",
-   "dataSource": "manual",
-   "staleDays": 5,
-   "needsReview": false,
-   "hasProfile": false,
-   "provenance": "holders=人工估算·市场层live"
   },
   {
    "slug": "jupiter",
@@ -707,7 +656,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -763,7 +712,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -817,7 +766,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -871,7 +820,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -924,7 +873,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "manual",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "holders=人工估算·市场层live"
@@ -974,10 +923,67 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
+  },
+  {
+   "slug": "aave",
+   "name": "Aave",
+   "ticker": "AAVE",
+   "track": "借贷",
+   "price": 90.71,
+   "yield30d": 0.005,
+   "yield7d": 0,
+   "yield1y": 0.0212,
+   "yieldRobust": 0.005,
+   "yieldPulse": true,
+   "yieldWindows": 3,
+   "yieldFdv": 0.0048,
+   "yieldTrend": "down",
+   "passiveYield": 0,
+   "passiveAccessible": false,
+   "emissionAnnualPct": null,
+   "emissionSrc": null,
+   "emissionProv": null,
+   "netYield": null,
+   "netCaptureUsd": null,
+   "holdersRevAnnual": 7013000,
+   "protocolRevAnnual": 46357000,
+   "grossFeeAnnual": 348959000,
+   "mcap": 1397585754,
+   "fdv": 1450497161,
+   "mechanism_type": "discretionary",
+   "payout_destination": "treasury",
+   "verdict": "partial",
+   "trust_gate": "pass",
+   "grade": "D",
+   "score": 14,
+   "cheapBucket": "not-in-pocket",
+   "bucketLabel": "便宜但钱不到手",
+   "flags": [
+    "媒体口径放大~50x",
+    "run-rate 在缩",
+    "多窗口发散>2x·勿信单窗口(已取稳健口径)",
+    "回购进金库/信托·不到手"
+   ],
+   "reasons": [
+    "钱到 DAO 金库/信托，不是全体持有人现金"
+   ],
+   "shortlist": true,
+   "note": "真实但被 rsETH 桥事故腰斩的现金流生意(TVL $41B→$14.2B)。■命门:Aavenomics 3.0「不可变/自动/100%路由」链上三属性全未坐实——无 executor 合约地址、7d 路由率 0%、30d 仅 14.9%;「6-27 live」是 announced。■真回购自 2026-04-19 rsETH 桥事故后暂停,6 月未确认链上重启;近端真到 token≈$0(holdersRev 7d/24h=$0、30d 仅 $576.5k)。■媒体 $402M 放大~13x:毛费 $907M(1y)≠协议收入 $119M≠真到 token $29.5M(1y·衰减);同稿「292 AAVE/天」($9.6M/yr)与「$400M」自相矛盾 40x;Kulechov 6-25 亲承年收入~$134M。■「便宜」是 fee-multiple 错觉:P/F~4x 仅对毛费,P/Rev 12-30x、P/to-token~47x 不便宜。■回购进生态储备(未销毁未分红,可再作激励发出),去向未定(储备/安全模块/销毁三选)。■真团队真产品(借贷#1,$10.25B借款/~40%市场)+固定16M无增发+真国库($110-133M硬资产)+坏账已补80%,trust PASS——问题在捕获又薄又停。■v4 已 live(ETH 03-30/Avalanche 07-15),不再是「待观察」。裁决:partial·announced-not-live·衰减中;升 confirmed 需 executor 地址+链上连续收入→回购tx+holdersRev 30d≈protocolRev 30d。",
+   "onchainRefs": [
+    "AFC 回购多签(真流)0x22740deBa78d5a0c24C58C740e3715ec29de1bFa + MainnetSwapSteward 手动执行",
+    "⚠️旧锚点盯错:Collector V2 0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c 非回购执行地址",
+    "Aavenomics 3.0 不可变 executor：未公布(待下季度电话会)"
+   ],
+   "lastVerified": "2026-07-19",
+   "dataSource": "manual",
+   "staleDays": 0,
+   "needsReview": false,
+   "hasProfile": true,
+   "provenance": "holders=人工估算·市场层live"
   },
   {
    "slug": "ether.fi",
@@ -1028,7 +1034,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -1079,7 +1085,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -1132,7 +1138,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -1190,7 +1196,7 @@
    ],
    "lastVerified": "2026-07-14",
    "dataSource": "seed",
-   "staleDays": 4,
+   "staleDays": 5,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -1240,7 +1246,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -1288,7 +1294,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -1338,7 +1344,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -1391,7 +1397,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -1439,7 +1445,7 @@
    "onchainRefs": [],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"
@@ -1500,7 +1506,7 @@
    ],
    "lastVerified": "2026-07-13",
    "dataSource": "seed",
-   "staleDays": 5,
+   "staleDays": 6,
    "needsReview": false,
    "hasProfile": false,
    "provenance": "seed快照"

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN" data-skin="dawn">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AAVE · Aave — Facta 档案</title>
+<style>
+:root{--firec:#9C4A2E;--woodc:#4F6B45;--goldc:#8A6A26;--font:-apple-system,"SF Pro Display","PingFang SC",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+html[data-skin="dawn"]{--bg:#EDE4D3;--panel:#F4EEE1;--panel2:#E4D9C3;--ink:#2E2620;--dim:#7A6B54;--line:rgba(46,38,32,.15)}
+html[data-skin="dusk"]{--bg:#2E2620;--panel:#3A2F26;--panel2:#241D18;--ink:#EDE4D3;--dim:#A99B84;--line:rgba(237,228,211,.16);--firec:#C05A38;--woodc:#8AA06A;--goldc:#C09A44}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55}
+.wrap{max-width:860px;margin:0 auto;padding:26px 20px 60px}
+a{color:inherit}
+.kick{font-family:var(--mono);font-size:12px;color:var(--dim)}.kick b{color:var(--firec)}
+h1{font-size:32px;margin:6px 0 2px}h2{font-size:16px;margin:26px 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.mono{font-family:var(--mono)}
+.chips{margin:6px 0}.chip{display:inline-block;font-size:11.5px;background:var(--panel2);border-radius:6px;padding:2px 8px;margin:2px 4px 2px 0}
+.g{display:inline-block;min-width:24px;text-align:center;font-weight:700;font-family:var(--mono);border-radius:6px;padding:2px 8px}
+.gA,.gB{background:rgba(79,107,69,.18);color:var(--woodc)}.gC{background:rgba(169,130,47,.2);color:var(--goldc)}.gD{background:rgba(122,107,84,.2);color:var(--dim)}.gF{background:rgba(156,74,46,.16);color:var(--firec)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:10px 0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.cell{background:var(--panel2);border-radius:10px;padding:10px 12px}.lbl{font-size:11px;color:var(--dim)}.big{font-size:22px;font-weight:700;font-family:var(--mono)}.sub{font-size:11.5px;color:var(--dim)}
+.warn{font-size:12px;color:var(--firec);margin-top:8px}
+.frow{display:flex;align-items:center;gap:10px;margin:6px 0}.flab{width:110px;flex:none;text-align:right;font-size:12px;color:var(--dim)}.ftrack{flex:1}.fval{width:80px;text-align:right;font-family:var(--mono);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.ev{padding:7px 0;border-bottom:1px dashed var(--line);font-size:13.5px}.evn{font-size:12px;color:var(--dim);margin:2px 0 0 18px}
+.unv{font-size:10.5px;color:var(--goldc);border:1px solid var(--goldc);border-radius:5px;padding:0 4px}
+.note{font-size:13px;line-height:1.7;white-space:pre-wrap}
+.foot{margin-top:30px;border-top:1px solid var(--line);padding-top:10px;font-family:var(--mono);font-size:11px;color:var(--dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.px{text-align:right}.px .p{font-size:26px;font-weight:700;font-family:var(--mono)}
+.btn{font-size:12.5px;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:5px 12px;cursor:pointer;color:var(--ink)}
+</style></head>
+<body><div class="wrap">
+<div class="kick"><a href="../index.html" style="text-decoration:none">← 返回总表</a> ｜ <b>FACTA</b> · 事实 ｜ 单项目终审档案 <span style="float:right"><button class="btn" onclick="const h=document.documentElement;h.dataset.skin=h.dataset.skin==='dawn'?'dusk':'dawn'">◑</button></span></div>
+
+<div class="top">
+  <div>
+    <h1>AAVE <span style="font-size:16px;color:var(--dim);font-weight:400">Aave · 借贷</span></h1>
+    <div class="chips"><span class="g gD">D</span> <span class="chip">便宜但钱不到手</span> <span class="chip">partial</span> <span class="chip">机制 discretionary</span> <span class="chip">到手 treasury</span></div>
+  </div>
+  <div class="px"><div class="p">$90.710</div><div class="sub">市值 $1.40B · FDV $1.45B<br>数据 as-of 2026-07-19</div></div>
+</div>
+
+<div class="card" style="border-left:4px solid var(--firec);border-radius:0 14px 14px 0"><div class="note">剥掉「$402M收入/$400M回购/6-27不可变引擎」三层叙事——AAVE 是一门真实但被 rsETH 桥事故腰斩的现金流生意(TVL $41B→$14.2B):媒体口径放大~13x,「便宜」只是 gross-fee 错觉(到-token 口径~47x),而 3.0 的自动回购引擎链上全未坐实、真回购是暂停中的委员会裁量买入。真团队、真生意、无增发,但价值捕获又薄又停。</div></div>
+
+<h2>K 线(365 天)</h2><div class="card"><div style="color:var(--dim);font-size:12px">暂无 K 线数据</div></div>
+
+<h2>回本账 · 一出一进</h2><div class="card">
+  <div class="grid2">
+    <div class="cell"><div class="lbl">一出(你付)</div><div class="big">$100</div><div class="sub">买入市值份额</div></div>
+    <div class="cell"><div class="lbl">一进(每年流回)</div><div class="big">$0.00<span style="font-size:13px;color:var(--dim)">/年</span></div>
+      <div class="sub">被动到手 $0.00 · 回购规模 $0.50(须锁/质押/进金库)</div></div>
+    <div class="cell"><div class="lbl">回本(按当前 run-rate)</div><div class="big">~200 年</div><div class="sub">FDV 稀释口径 ~208 年</div></div>
+    <div class="cell"><div class="lbl">净含排放</div><div class="big">—</div><div class="sub">无排放数据(不编)</div></div>
+  </div>
+  <div class="warn">⚠️ 回购是交易量的函数,顺周期非固定息票——熊市里"进"会同步缩(季度序列已三连降)。run-rate 外推仅作直觉锚,非承诺。</div></div>
+
+<h2>资金流向 · 钱到哪了</h2><div class="card" data-module="funds-flow-section"><svg viewBox="0 0 760 300" style="width:100%;height:auto;aspect-ratio:760/300;display:block" preserveAspectRatio="xMidYMid meet" role="img" aria-label="资金流向桑基图">
+  <path d="M 118 149.0 C 224 149.0, 224 44.0, 330 44.0 L 330 226.1 C 224 226.1, 224 331.1, 118 331.1 Z" fill="var(--dim)" fill-opacity=".5" data-module="funds-flow" data-flow-role="leak" data-usd="302602000"/>
+  <path d="M 118 226.1 C 224 226.1, 224 226.1, 330 226.1 L 330 254.0 C 224 254.0, 224 254.0, 118 254.0 Z" fill="var(--goldc)" fill-opacity=".5" data-module="funds-flow" data-flow-role="inflow" data-usd="46357000"/>
+  <path d="M 330 226.1 C 425 226.1, 425 226.1, 520 226.1 L 520 254.0 C 425 254.0, 425 254.0, 330 254.0 Z" fill="var(--firec)" fill-opacity=".5" data-module="funds-flow" data-flow-role="inflow" data-usd="46357000"/>
+  <path d="M 520 237.9 C 610 237.9, 610 237.9, 700 237.9 L 700 242.2 C 610 242.2, 610 242.2, 520 242.2 Z" fill="var(--firec)" fill-opacity=".5" data-module="funds-flow" data-flow-role="to-token" data-usd="7013000"/>
+  <rect x="114" y="44.0" width="8" height="210.0" fill="var(--ink)" rx="2"/><text x="124" y="38.0" text-anchor="start" font-size="12" font-weight="600" fill="var(--ink)">交易费(毛)</text><text x="124" y="55.0" text-anchor="start" font-size="11" font-family="var(--mono)" fill="var(--dim)">$349.0M</text>
+  <rect x="326" y="44.0" width="8" height="182.1" fill="var(--dim)" rx="2"/><text x="330" y="38.0" text-anchor="middle" font-size="12" font-weight="600" fill="var(--ink)">漏给存款人</text><text x="330" y="55.0" text-anchor="middle" font-size="11" font-family="var(--mono)" fill="var(--dim)">$302.6M ·87%</text>
+  <rect x="326" y="226.1" width="8" height="27.9" fill="var(--goldc)" rx="2"/><text x="330" y="220.1" text-anchor="middle" font-size="12" font-weight="600" fill="var(--ink)">协议收入</text><text x="330" y="237.1" text-anchor="middle" font-size="11" font-family="var(--mono)" fill="var(--dim)">$46.4M</text>
+  <rect x="516" y="226.1" width="8" height="27.9" fill="var(--firec)" rx="2"/><text x="520" y="220.1" text-anchor="middle" font-size="12" font-weight="600" fill="var(--ink)">回购(暂停中)</text><text x="520" y="237.1" text-anchor="middle" font-size="11" font-family="var(--mono)" fill="var(--dim)"></text>
+  <rect x="696" y="237.9" width="8" height="4.2" fill="var(--firec)" rx="2"/><text x="694" y="231.9" text-anchor="end" font-size="12" font-weight="600" fill="var(--ink)">进储备·未销毁</text><text x="694" y="248.9" text-anchor="end" font-size="11" font-family="var(--mono)" fill="var(--dim)">$7.0M/年</text>
+  <text x="700" y="262.2" text-anchor="end" font-size="12" font-weight="700" fill="var(--firec)">到 token / 毛费 ≈ 2%</text>
+  
+  <line x1="520" y1="24" x2="520" y2="222.1" stroke="var(--woodc)" stroke-width="1.4" stroke-dasharray="4,3" marker-end="url(#arg)"/><text x="520" y="16" text-anchor="middle" font-size="11" font-weight="600" fill="var(--woodc)">待落账 ↓</text>
+  <defs><marker id="ar" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--firec)"/></marker><marker id="arg" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--woodc)"/></marker></defs>
+  </svg>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--dim);margin-top:4px">
+    <span><span style="color:var(--dim)">▬</span> 漏损(归 LP)</span><span><span style="color:var(--goldc)">▬</span> 协议留存</span><span><span style="color:var(--firec)">▬</span> 到 token</span><span><span style="color:var(--woodc)">▬</span> 待落账(announced)</span>
+  </div>
+  
+  <div style="font-size:11.5px;color:var(--dim);margin-top:2px"><span style="color:var(--woodc)">↓ 待落账</span> Aavenomics 3.0 不可变 executor(未部署·待下季度电话会)——已批准、现金流尚未发生,不入 realized</div>
+<div style="font-size:12px;color:var(--dim);margin-top:8px">多窗口 yield:7d 0.0% / 30d 0.5% / 1y 2.1% → 稳健口径 <b>0.5%</b> ⚡发散>2x · 被动到手 <b>0.0%</b> · FDV 口径 0.5%</div></div>
+
+<h2>供应与解锁</h2><div class="card">
+<div class="grid2">
+  <div class="cell"><div class="lbl">总量</div><div class="big" style="font-size:16px">16,000,000 AAVE(固定硬顶,无增发/无协议通胀)</div></div>
+  <div class="cell"><div class="lbl">流通</div><div class="big" style="font-size:16px">~15.49M(96.4%)</div></div>
+  <div class="cell"><div class="lbl">FDV/市值(稀释悬顶)</div><div class="big" style="font-size:16px">1.0x</div></div>
+</div>
+<div class="warn">FDV≈mcap(近全流通);无 VC/团队 vesting 悬顶(2020 从 LEND 1:1 迁移,早已 vest 完);唯一「解锁」是 DAO 生态储备剩~0.5M(~3.5%),按 incentive 慢放非砸盘。稀释风险≈0=正面。</div>
+
+<div style="font-size:11px;color:var(--dim);margin-top:6px">来源:tokenomist.ai/aave + CoinGecko,2026-07-19</div></div>
+
+<h2>国库四问 · 资金流</h2><div class="card" data-module="treasury-flow-section"><svg viewBox="0 0 760 280" style="width:100%;height:auto;aspect-ratio:760/280;display:block" preserveAspectRatio="xMidYMid meet" role="img" aria-label="国库四问流向图"><text x="150" y="16" text-anchor="end" font-size="11" fill="var(--dim)">① 入水口</text><text x="610" y="16" font-size="11" fill="var(--dim)">② 出水口 / ③ 到 token</text><path d="M 150 26.0 C 265 26.0, 265 118.0, 380 118.0 L 380 154.0 C 265 154.0, 265 62.0, 150 62.0 Z" fill="var(--goldc)" fill-opacity=".45" data-module="treasury-flow" data-flow-role="inflow"/><text x="142" y="41" text-anchor="end" font-size="12" fill="var(--ink)">reserve factor(借款息抽成)</text><path d="M 150 72.0 C 265 72.0, 265 118.0, 380 118.0 L 380 154.0 C 265 154.0, 265 108.0, 150 108.0 Z" fill="var(--goldc)" fill-opacity=".45" data-module="treasury-flow" data-flow-role="inflow"/><text x="142" y="87" text-anchor="end" font-size="12" fill="var(--ink)">GHO 借款息(100%→DAO)</text><path d="M 150 118.0 C 265 118.0, 265 118.0, 380 118.0 L 380 154.0 C 265 154.0, 265 154.0, 150 154.0 Z" fill="var(--goldc)" fill-opacity=".45" data-module="treasury-flow" data-flow-role="inflow"/><text x="142" y="133" text-anchor="end" font-size="12" fill="var(--ink)">清算费</text><path d="M 150 164.0 C 265 164.0, 265 118.0, 380 118.0 L 380 154.0 C 265 154.0, 265 200.0, 150 200.0 Z" fill="var(--goldc)" fill-opacity=".45" data-module="treasury-flow" data-flow-role="inflow"/><text x="142" y="179" text-anchor="end" font-size="12" fill="var(--ink)">闪电贷费 0.05%</text><path d="M 150 210.0 C 265 210.0, 265 118.0, 380 118.0 L 380 154.0 C 265 154.0, 265 246.0, 150 246.0 Z" fill="var(--goldc)" fill-opacity=".45" data-module="treasury-flow" data-flow-role="inflow"/><text x="142" y="225" text-anchor="end" font-size="12" fill="var(--ink)">AWW:全 Aave 产品收入</text><path d="M 380 120.0 C 495 120.0, 495 28.0, 610 28.0 L 610 60.0 C 495 60.0, 495 152.0, 380 152.0 Z" fill="var(--firec)" fill-opacity=".45" data-module="treasury-flow" data-flow-role="to-token" data-usd="7000000"/><text x="618" y="41" font-size="12" font-weight="700" fill="var(--firec)">回购→储备(暂停) ✓到token</text><text x="618" y="55" font-size="10.5" font-family="var(--mono)" fill="var(--dim)">$7.0M</text><path d="M 380 108.6 C 495 108.6, 495 62.6, 610 62.6 L 610 117.4 C 495 117.4, 495 163.4, 380 163.4 Z" fill="var(--dim)" fill-opacity=".45" data-module="treasury-flow" data-flow-role="leak" data-usd="12000000"/><text x="618" y="87" font-size="12" font-weight="400" fill="var(--ink)">服务商/grants</text><text x="618" y="101" font-size="10.5" font-family="var(--mono)" fill="var(--dim)">$12.0M</text><path d="M 380 101.8 C 495 101.8, 495 101.8, 610 101.8 L 610 170.2 C 495 170.2, 495 170.2, 380 170.2 Z" fill="var(--dim)" fill-opacity=".45" data-module="treasury-flow" data-flow-role="leak" data-usd="15000000"/><text x="618" y="133" font-size="12" font-weight="400" fill="var(--ink)">安全模块/激励</text><text x="618" y="147" font-size="10.5" font-family="var(--mono)" fill="var(--dim)">$15.0M</text><path d="M 380 108.6 C 495 108.6, 495 154.6, 610 154.6 L 610 209.4 C 495 209.4, 495 163.4, 380 163.4 Z" fill="var(--dim)" fill-opacity=".45" data-module="treasury-flow" data-flow-role="leak" data-usd="12000000"/><text x="618" y="179" font-size="12" font-weight="400" fill="var(--ink)">做市/运营/审计</text><text x="618" y="193" font-size="10.5" font-family="var(--mono)" fill="var(--dim)">$12.0M</text><rect x="373" y="31" width="14" height="210" rx="3" fill="var(--ink)"/><text x="380" y="25" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">Aave DAO 国库</text></svg>
+  <div style="font-size:12.5px;line-height:1.5;margin-top:8px"><div style="margin:5px 0"><span style="font-family:var(--mono);color:var(--goldc)">①</span> <b>入水口</b>：reserve factor(借款利息抽成 10-50%,大头)+ GHO 借款息(100%到 DAO)+ 清算费 + 闪电贷 0.05% + Paraswap 分成 + v4 Chainlink SVR MEV 回收;AWW(~75%通过)后所有 Aave 品牌产品收入也归 DAO。抽成率~13% of 毛费,协议真实留存~$46M/yr(近端 run-rate)/$119M(1y)。</div><div style="margin:5px 0"><span style="font-family:var(--mono);color:var(--goldc)">②</span> <b>出水口</b>：服务商/贡献者 grants + $25M 稳定币生态增长 grant(分期)+ 安全模块/Umbrella 质押激励 + Merit/流动性 &amp; GHO 激励 + 做市/运营/安全审计 +(激活时)回购;2026-04 还得吸收 rsETH 坏账。</div><div style="margin:5px 0"><span style="font-family:var(--mono);color:var(--goldc)">③</span> <b>到 token</b>：⚠️只有回购朝 token,且当前 NOT flowing:旧裁量回购累计~205k AAVE(~1.28%供应,~1.06%/yr)真上链,但自 2026-04-19 暂停、6 月未确认重启;DeFiLlama holdersRev 近端=$0。真到 token realized≈$0。</div><div style="margin:5px 0"><span style="font-family:var(--mono);color:var(--goldc)">④</span> <b>销毁/回购</b>：不销毁。买回的 AAVE 沉淀 DAO 生态储备(HELD,减有效流通但不分发),去向未定三选:(a)留储备做风险 backstop (b)进安全模块加深保险 (c)销毁退流通。当前=囤积/留存,非通缩销毁、非质押分红。</div></div>
+  <div class="warn">回购是唯一朝 token 的出水口,但既暂停、又进储备(未销毁未分红、可再作激励发出)——这是它归 not-in-pocket 而非 cheap-executed 的根本。出水口按近端~$46M/yr run-rate 估,回购那条是四出水里最小的一条(且暂停)。</div></div>
+
+<h2>国库(与持有人的关系)</h2><div class="card">
+<b>Aave DAO 国库(真国库,非 HYPE 式基金会独占)</b>
+<div class="grid2" style="margin-top:8px">
+  <div class="cell"><div class="lbl">持仓</div><div class="big" style="font-size:15px">硬资产(非 AAVE)~$110-133M;含自家 AAVE ~$300-330M(⚠️口径/日期敏感:TokenLogic 2025-08 excl-AAVE $132.7M/incl $329M;Token Terminal 2026 中 ~$110.9M——2026 因 rsETH 坏账+行情回落)</div></div>
+  <div class="cell"><div class="lbl">占流通市值</div><div class="big" style="font-size:15px">硬资产/市值 ≈ 8-10%(含 AAWE 22-24%)——对照 AXS ~71% 硬 ETH 国库,Aave 战备金比例小且是「运营性」的:它的价值在活的现金流生意,不在国库囤积</div></div>
+</div>
+<div class="warn">安全模块 ~$184M stkAAVE=保险 backstop(可 slash 补亏),非可花 DAO 现金;Umbrella 升级正把 stkAAVE slashing 关掉、保险层移到 aUSDC/aUSDT/aWETH/GHO;backstop 薄(~1.3% of deposits)</div>
+<div style="font-size:11px;color:var(--dim);margin-top:6px">来源:TokenLogic / Token Terminal / DeFiLlama,2025-08~2026-07(口径见 holdings 注)</div></div>
+
+<h2>专属特殊指标</h2><div class="card"><table><tr><td><b>协议 TVL</b></td><td class="mono">$14.2B(v3 $13.75B)</td><td style="color:var(--dim)">从 2025-10 的 $36.4B/峰值 $41.1B 腰斩——rsETH 挤兑($6-10B 提款)+行情双杀。仍链上借贷#1。</td></tr><tr><td><b>活跃借款量</b></td><td class="mono">~$10.25B</td><td style="color:var(--dim)">占全 DeFi 借贷~$25B 市场约 40%,第一。</td></tr><tr><td><b>三层费(30d年化/1y)</b></td><td class="mono">毛费 $349M/$907M → 协议收入 $46M/$119M → 真到token $7M/$29.5M</td><td style="color:var(--dim)">DeFiLlama API 2026-07-19 实拉;holdersRev 7d/24h=$0(暂停)。抽成率~13% of 毛费。</td></tr><tr><td><b>回购状态</b></td><td class="mono">暂停(自 2026-04-19)</td><td style="color:var(--dim)">rsETH 事故后暂停;旧裁量回购累计~205k AAVE(1.28%供应);「Restart aave buy backs」治理帖 6 月未确认链上重启。</td></tr><tr><td><b>Aavenomics 3.0 executor</b></td><td class="mono">未公布合约地址</td><td style="color:var(--dim)">不可变引擎 announced,细节推迟下季度电话会;founder 6-25「team is working on this」。</td></tr><tr><td><b>GHO 流通</b></td><td class="mono">~$584-599M</td><td style="color:var(--dim)">原生稳定币,借款息 100% 归 DAO;是国库入水口之一。</td></tr><tr><td><b>估值倍数(三口径)</b></td><td class="mono">P/F~4x(毛费) / P/Rev 12-30x / P/to-token~47x</td><td style="color:var(--dim)">「便宜」只在毛费口径成立;真到 token 口径不便宜。</td></tr><tr><td><b>安全模块</b></td><td class="mono">~$184M stkAAVE</td><td style="color:var(--dim)">保险 backstop(可 slash),非可花现金;Umbrella 改造中。</td></tr></table></div>
+
+<h2>近期重要事件</h2><div class="card"><div class="ev"><span style="color:var(--firec)">●</span> <span class="mono">2026-04-17</span> <b>KelpDAO/rsETH 跨链桥被黑,坏账+挤兑传导进 Aave(窗口最重大事件)</b><div class="evn">LayerZero 桥漏洞释放~116,500 rsETH(~$293M),失背书后在 Aave 借出~$190-200M→~$177-230M 坏账;引发挤兑,窗口内 $6-10B TVL 被提。这是 TVL 从 $36-41B 腰斩到 ~$14.2B 的直接主因,非单纯行情。桥漏洞非 Aave 合约。</div></div><div class="ev"><span style="color:var(--dim)">●</span> <span class="mono">2026-04-26</span> <b>Aave 已筹~$160M(占~$200M 覆盖需求的~80%)填补坏账</b><div class="evn">DAO 牵头联合 DeFi 伙伴救助;消耗国库/安全模块能力,是 2026 回购预算被砍的现实背景。</div></div><div class="ev"><span style="color:var(--dim)">●</span> <span class="mono">2026-06-25</span> <b>Kraken 洽谈以 $385M 估值收购 Aave Group 15% 股权</b><div class="evn">拟投 35,000 ETH(~$71M)换 250k AAVE + 15% 普通股。Kulechov 亲承 Aave 年收入~$134M、「归 Aave DAO」——直接给媒体 $402M 打脸;股权估值 $385M vs token 市值 $1.40B 倒挂。信息价值&gt;价格影响。</div></div><div class="ev"><span style="color:var(--dim)">●</span> <span class="mono">2026-06-27</span> <b>Aavenomics 3.0「上线」+ 回购预算 $50M→$30M/yr(⚠️announced)</b><div class="evn">宣称 100%收入自动路由进不可变回购引擎。但:①同稿「292 AAVE/天」≈$9.6M/yr 与「$400M」矛盾;②预算从 $50M 砍到 $30M;③realized 层面仍靠 AFC 多签手动,无不可变 executor 地址或收入→回购 tx。=announced 非 realized。</div></div><div class="ev"><span style="color:var(--woodc)">●</span> <span class="mono">2026-07-15</span> <b>Aave v4 上线 Avalanche(首个非以太坊部署)</b><div class="evn">v4 已 live:ETH 主网 2026-03-30、Avalanche 07-15(带 $15M 激励);Hub-and-Spoke 架构。档案「待观察」已过时。</div></div><div class="ev"><span style="color:var(--woodc)">●</span> <span class="mono">2026-07-10</span> <b>Horizon(机构 RWA)~$540M 资产/~$163M 借出</b> <span class="unv">待核验</span><div class="evn">目标破 $1B;代币化美债抵押借稳定币,GHO 需求来源之一。二手聚合数字,未一手复核。</div></div><div class="ev"><span style="color:var(--woodc)">●</span> <span class="mono">2026-07-12</span> <b>Ether.fi 提案在 Aave V4 跑信用卡后端($175M 存款/20% 收入分成)</b> <span class="unv">待核验</span><div class="evn">若成真=v4 作为流动性基础设施被外部产品调用第一例+真实收入分成。单一二手来源、状态未核,当线索。</div></div></div>
+
+<h2>终审档案(判断层原文)</h2><div class="card">
+<div class="chips"><span class="chip">媒体口径放大~50x</span><span class="chip">run-rate 在缩</span><span class="chip">多窗口发散&gt;2x·勿信单窗口(已取稳健口径)</span><span class="chip">回购进金库/信托·不到手</span></div>
+<div class="note">真实但被 rsETH 桥事故腰斩的现金流生意(TVL $41B→$14.2B)。■命门:Aavenomics 3.0「不可变/自动/100%路由」链上三属性全未坐实——无 executor 合约地址、7d 路由率 0%、30d 仅 14.9%;「6-27 live」是 announced。■真回购自 2026-04-19 rsETH 桥事故后暂停,6 月未确认链上重启;近端真到 token≈$0(holdersRev 7d/24h=$0、30d 仅 $576.5k)。■媒体 $402M 放大~13x:毛费 $907M(1y)≠协议收入 $119M≠真到 token $29.5M(1y·衰减);同稿「292 AAVE/天」($9.6M/yr)与「$400M」自相矛盾 40x;Kulechov 6-25 亲承年收入~$134M。■「便宜」是 fee-multiple 错觉:P/F~4x 仅对毛费,P/Rev 12-30x、P/to-token~47x 不便宜。■回购进生态储备(未销毁未分红,可再作激励发出),去向未定(储备/安全模块/销毁三选)。■真团队真产品(借贷#1,$10.25B借款/~40%市场)+固定16M无增发+真国库($110-133M硬资产)+坏账已补80%,trust PASS——问题在捕获又薄又停。■v4 已 live(ETH 03-30/Avalanche 07-15),不再是「待观察」。裁决:partial·announced-not-live·衰减中;升 confirmed 需 executor 地址+链上连续收入→回购tx+holdersRev 30d≈protocolRev 30d。</div>
+<div style="font-size:11.5px;color:var(--dim);margin-top:8px">链上参照:AFC 回购多签(真流)0x22740deBa78d5a0c24C58C740e3715ec29de1bFa + MainnetSwapSteward 手动执行 ｜ ⚠️旧锚点盯错:Collector V2 0x464c71f6c2f760dda6093dcb91c24c39e5d6e18c 非回购执行地址 ｜ Aavenomics 3.0 不可变 executor：未公布(待下季度电话会)<br>判断复核 2026-07-19 · 档案口径 2026-07-19 · 2026-07-19 五路核验(DeFiLlama API 实拉三层费 + 治理论坛 + 官方口径 + 多源交叉);推翻档案 2 处字段(payout burn-all→treasury、mechanism immutable-auto→discretionary)+ 补 rsETH 事故缺口</div></div>
+
+<div class="foot">
+  <div><em>Facta, non verba</em> · Powered by <a href="https://www.coingecko.com">CoinGecko</a> · 数据 <a href="https://defillama.com">DeFiLlama</a></div>
+  <div>非投资建议 · 作者持有加密资产 · <span style="color:var(--firec)">@Cyrusnothing</span></div>
+</div>
+</div></body></html>
