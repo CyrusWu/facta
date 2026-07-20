@@ -59,9 +59,9 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="kick" id="kick"><span style="color:var(--firec);font-weight:700">FACTA</span> · 事实 ｜ DeFi 价值捕获终审 · realized 口径 · 链上核验</div>
+  <div class="kick" id="kick"><span style="color:var(--firec);font-weight:700">FACTA</span> · 事实 ｜ 价值捕获终审 · 真营收资产(链上 + 股票) · realized / 财报口径</div>
   <h1>便宜 <span class="ne">≠</span> 买入</h1>
-  <div class="sub">DeFi 里真正“便宜且已兑现给持有人”的价值捕获，一只手数得完——90% 的便宜是“便宜有理由”或“便宜但钱不进你口袋”。评级先过 trust-gate / realized / 到手三道硬闸门，再按数字打分。</div>
+  <div class="sub">真正“便宜且已兑现给持有人”的价值捕获，一只手数得完——90% 的便宜是“便宜有理由”或“便宜但钱不进你口袋”。同一把尺量链上协议与真营收企业：<b>真营收 × 持有人能否捕获 × 贵不贵</b>；DeFi 先过 trust-gate / realized / 到手三道硬闸门，股票走财报口径，再按数字打分。</div>
   <div class="warn" id="disc"></div>
 
   <div class="funnel" id="funnel"></div>
@@ -103,11 +103,11 @@ const BUCKETS=[
 ];
 const GRADES=['A','B','C','D','F'];
 const POCKET={'burn-all':'全员 ✓','dividend-all':'全员 ✓','ve-locker':'须锁','staker':'须质押','treasury':'进金库 ✗','trust-hold':'进信托 ✗','discretionary':'裁量','none':'—'};
-const fmtUSD=n=>{n=+n||0;const a=Math.abs(n);if(a>=1e9)return '$'+(n/1e9).toFixed(2)+'B';if(a>=1e6)return '$'+(n/1e6).toFixed(1)+'M';if(a>=1e3)return '$'+(n/1e3).toFixed(0)+'K';return n?'$'+n:'—'};
+const fmtUSD=n=>{n=+n||0;const a=Math.abs(n);if(a>=1e12)return '$'+(n/1e12).toFixed(2)+'T';if(a>=1e9)return '$'+(n/1e9).toFixed(2)+'B';if(a>=1e6)return '$'+(n/1e6).toFixed(1)+'M';if(a>=1e3)return '$'+(n/1e3).toFixed(0)+'K';return n?'$'+n:'—'};
 const fmtPrice=p=>{if(p==null)return '—';p=+p;const a=Math.abs(p);if(a>=100)return '$'+p.toFixed(2);if(a>=1)return '$'+p.toFixed(3);if(a>=0.01)return '$'+p.toFixed(4);if(a>=0.0001)return '$'+p.toFixed(6);return '$'+p.toExponential(2)};
 const pct=x=>(x*100).toFixed(1)+'%';
 let DATA=null, state={group:'bucket',hideFail:true,realOnly:false,starOnly:false,q:''};
-const isFail=r=>r.grade==='F'||r.cheapBucket==='no-capture'||['narrative','trap','no-token'].includes(r.verdict);
+const isFail=r=>(!r.assetClass||r.assetClass==='defi')&&(r.grade==='F'||r.cheapBucket==='no-capture'||['narrative','trap','no-token'].includes(r.verdict));
 
 fetch('./data/data.json').then(r=>r.json()).then(d=>{DATA=d;boot()}).catch(e=>{
   document.getElementById('app').innerHTML='<p style="color:var(--firec)">读取 data.json 失败——请用静态服务器打开（npm run serve），file:// 会被浏览器拦。</p>';
@@ -139,7 +139,7 @@ function render(){
   const failCount=rows.filter(isFail).length;
   if(state.hideFail) rows=rows.filter(r=>!isFail(r));
   document.getElementById('hiddenNote').textContent=state.hideFail?('已藏掉 '+failCount+' 个不合格（无捕获 / 无 token / trust-fail）——不浪费精力；取消“藏掉不合格”可展开'):'';
-  if(state.realOnly) rows=rows.filter(r=>['A','B','C'].includes(r.grade)&&r.holdersRevAnnual>0);
+  if(state.realOnly) rows=rows.filter(r=>['A','B','C'].includes(r.grade)&&(r.holdersRevAnnual>0||(r.assetClass&&r.assetClass!=='defi')));
   if(state.starOnly) rows=rows.filter(r=>r.shortlist);
   if(state.q) rows=rows.filter(r=>(r.name+r.ticker+r.track).toLowerCase().includes(state.q));
   let groups;
@@ -159,6 +159,27 @@ function table(rs){
   for(const r of rs){
     const stale=r.needsReview?'<span class="stale">🚩需复核</span>':(r.staleDays>30?'<span class="stale">待复核 '+r.staleDays+'d</span>':'<span style="color:var(--dim);font-size:11px">'+r.lastVerified.slice(5)+'</span>');
     const tk=r.hasProfile?'<a href="./p/'+r.slug+'.html" class="tk" style="text-decoration:underline dotted" title="打开终审档案页" onclick="event.stopPropagation()">'+r.ticker+'</a>':'<span class="tk">'+r.ticker+'</span>';
+    if(r.assetClass&&r.assetClass!=='defi'){
+      const clsLabel={equity:'股',crypto:'币','pre-ipo':'Pre'}[r.assetClass]||'·';
+      const clsFull={equity:'股票·真企业',crypto:'非DeFi币','pre-ipo':'Pre-IPO 合约代理'}[r.assetClass]||r.assetClass;
+      const px=fmtPrice(r.priceUsd!=null?r.priceUsd:r.price)+(r.currency&&r.currency!=='USD'?' <span style="font-size:10px;color:var(--dim)">('+fmtPrice(r.price)+' '+r.currency+')</span>':'');
+      const dash='<span style="color:var(--dim)">—</span>';
+      h+='<tr class="row"><td>'+tk+' <span class="chip" style="font-size:9px;padding:1px 4px;background:var(--goldc);color:#1a1207" title="'+clsFull+'">'+clsLabel+'</span>'+(r.shortlist?' <span class="star">★</span>':'')+'<br><span class="nm">'+r.name+'</span></td>'+
+        '<td class="num yl">'+px+'</td>'+
+        '<td class="num yl">'+fmtUSD(r.mcap)+'</td>'+
+        '<td class="num">'+dash+'</td>'+
+        '<td class="num">'+dash+'</td>'+
+        '<td class="num">'+(r.pe!=null?'<span class="yl">PE '+r.pe+'x</span>':dash)+'</td>'+
+        '<td><span class="g g'+r.grade+'">'+r.grade+'</span></td>'+
+        '<td class="hide-m" style="font-size:12px">'+r.verdict+'</td>'+
+        '<td class="hide-m" style="font-size:11px;color:var(--dim)">'+clsFull+'</td>'+
+        '<td>'+stale+'</td></tr>';
+      h+='<tr class="detail" style="display:none"><td colspan="10"><div class="note">'+(r.oneLiner||r.note||'')+'</div>'+
+        (r.metrics&&r.metrics.length?'<div style="margin-top:6px">'+r.metrics.map(m=>'<span class="chip">'+m.k+' <b style="color:var(--ink)">'+m.v+'</b></span>').join('')+'</div>':'')+
+        (r.flags&&r.flags.length?'<div style="margin-top:6px">'+r.flags.map(f=>'<span class="chip f">'+f+'</span>').join('')+'</div>':'')+
+        '<div class="meta">类别 '+clsFull+' · 市值 '+fmtUSD(r.mcap)+(r.pe!=null?' · P/E '+r.pe+'x':'')+(r.homeRef?' · 权威家 '+r.homeRef:'')+' · 核验 '+r.lastVerified+' · 数据 '+(r.dataSource==='quote-live'?'价 live·财报人工钉':r.dataSource)+'</div></td></tr>';
+      continue;
+    }
     h+='<tr class="row"><td>'+tk+(r.shortlist?' <span class="star" title="值得深度尽调">★</span>':'')+(r.hasProfile?' <span style="font-size:10px;color:var(--goldc)" title="有单页档案">📄</span>':'')+'<br><span class="nm">'+r.name+'</span></td>'+
       '<td class="num yl">'+fmtPrice(r.price)+'</td>'+
       '<td class="num yl">'+fmtUSD(r.mcap)+'</td>'+
