@@ -164,7 +164,7 @@ function table(rs){
       const clsFull={equity:'股票·真企业',crypto:'非DeFi币','pre-ipo':'Pre-IPO 合约代理'}[r.assetClass]||r.assetClass;
       const px=fmtPrice(r.priceUsd!=null?r.priceUsd:r.price)+(r.currency&&r.currency!=='USD'?' <span style="font-size:10px;color:var(--dim)">('+fmtPrice(r.price)+' '+r.currency+')</span>':'');
       const dash='<span style="color:var(--dim)">—</span>';
-      h+='<tr class="row"><td>'+tk+' <span class="chip" style="font-size:9px;padding:1px 4px;background:var(--goldc);color:#1a1207" title="'+clsFull+'">'+clsLabel+'</span>'+(r.shortlist?' <span class="star">★</span>':'')+'<br><span class="nm">'+r.name+'</span></td>'+
+      h+='<tr class="row"><td>'+tk+' <span class="chip" style="font-size:9px;padding:1px 4px;background:var(--goldc);color:#1a1207" title="'+clsFull+'">'+clsLabel+'</span>'+(r.shortlist?' <span class="star">★</span>':'')+'<br><span class="nm">'+r.name+'</span>'+(r.heldBy?'<br><span style="font-size:10px;color:var(--goldc)">▪ '+r.heldBy+'</span>':'')+'</td>'+
         '<td class="num yl">'+px+'</td>'+
         '<td class="num yl">'+fmtUSD(r.mcap)+'</td>'+
         '<td class="num">'+dash+'</td>'+
@@ -177,7 +177,7 @@ function table(rs){
       h+='<tr class="detail" style="display:none"><td colspan="10"><div class="note">'+(r.oneLiner||r.note||'')+'</div>'+
         (r.metrics&&r.metrics.length?'<div style="margin-top:6px">'+r.metrics.map(m=>'<span class="chip">'+m.k+' <b style="color:var(--ink)">'+m.v+'</b></span>').join('')+'</div>':'')+
         (r.flags&&r.flags.length?'<div style="margin-top:6px">'+r.flags.map(f=>'<span class="chip f">'+f+'</span>').join('')+'</div>':'')+
-        '<div class="meta">类别 '+clsFull+' · 市值 '+fmtUSD(r.mcap)+(r.pe!=null?' · P/E '+r.pe+'x':'')+(r.homeRef?' · 权威家 '+r.homeRef:'')+' · 核验 '+r.lastVerified+' · 数据 '+(r.dataSource==='quote-live'?'价 live·财报人工钉':r.dataSource)+'</div></td></tr>';
+        '<div class="meta">类别 '+clsFull+' · 市值 '+fmtUSD(r.mcap)+(r.pe!=null?' · P/E '+r.pe+'x':'')+(r.heldBy?' · 持有 '+r.heldBy:'')+(r.homeRef?' · 权威家 '+r.homeRef:'')+' · 核验 '+r.lastVerified+' · 数据 '+(r.dataSource==='quote-live'?'价 live·财报人工钉':r.dataSource)+'</div></td></tr>';
       continue;
     }
     h+='<tr class="row"><td>'+tk+(r.shortlist?' <span class="star" title="值得深度尽调">★</span>':'')+(r.hasProfile?' <span style="font-size:10px;color:var(--goldc)" title="有单页档案">📄</span>':'')+'<br><span class="nm">'+r.name+'</span></td>'+
