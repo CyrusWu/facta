@@ -7,7 +7,7 @@
 
 - **三层拆穿**：毛手续费（多归 LP）≠ 协议收入 ≠ 真到 token。全行业只有 ~6.3% 毛费到 token（2026-07 基线）——媒体口径默认放大一个数量级，见数放大先做除法。
 - **Realized-only**：只认已上链兑现。announced / 提案 / 路线图 / "全面铺开后 $X" = 叙事。
-- **多窗口**：7d/30d/90d/1y 同算;发散 >2x = 脉冲，亮「勿年化」旗，yield 取窗口中位（v1 引擎暂用 30d + 趋势旗，P1 升级）。
+- **多窗口**：7d/30d/90d/1y 同算;发散 >2x = 脉冲，亮「勿年化」旗，yield 取窗口中位。引擎现状:已用 7d/30d/1y 中位数打分(永不高于 30d),发散超过 2 倍亮旗;90d 窗口尚未接入。窗口本身是尖峰时(如 CAKE 2026-09 的 30d),由判断层 grade_cap 按权威结论封顶。
 - **双分母**：mcap 与 FDV 双口径;低流通高 FDV 时 mcap 口径 yield 是系统性谎言。
 - **双受益人**：被动持有人 vs 锁仓/质押者分开报（AERO 12% 是锁仓者的，被动 ≈2-4%）。
 
@@ -23,7 +23,7 @@
 
 ## 2. 不可逆性分级
 
-`immutable-auto`（合约强制自动，Firepit/Aavenomics3.0 式）> `governance-set-auto`（自动但比例可改，HYPE）> `governance-gated-inlet`（引擎不可逆但进料口逐票开，UNI 式单点故障）> `discretionary`（随时可停，Fluid 被关停已证）> `none`。
+`immutable-auto`（合约强制自动，UNI Firepit 式）> `governance-set-auto`（自动但比例可改，HYPE）> `governance-gated-inlet`（引擎不可逆但进料口逐票开，UNI 式单点故障）> `discretionary`（随时可停，Fluid 被关停已证）> `none`。
 
 ## 3. 硬闸门（按序，一票否决）
 
