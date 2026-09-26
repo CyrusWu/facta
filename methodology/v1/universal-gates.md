@@ -31,12 +31,14 @@
 |---|---|---|---|
 | G1 | 无 token / payout=none / 捕获被书面否认 | **F** | Polymarket、Morpho、LDO(假9.7%)、SLX |
 | G2 | trust-gate fail（判据=**要不要防坑**，非数字真假；口径失真同向、承诺删除史、审计声明查无实据） | **F** | ASTER、USUAL、BELIEVE |
-| G3 | verdict=trap（已证伪） | **F** | HUMA($90实烧) |
-| G4 | narrative（纸面未兑现）或链上零兑现 | **封顶 D** | ENA(sENA 22月+1.86%) |
+| G3 | verdict=trap（已证伪） | **F** | SLX(回购用途写入后删除) |
+| G4 | narrative（纸面未兑现）或链上零兑现 | **封顶 D** | ENA(fee switch 已投票通过、未启动)、HUMA(50% 销毁仅设计,池子未设协议费,累计烧约 $123) |
 | G5 | 回购进金库/信托 | **封顶 C** | Maple、Jupiter、deBridge、Spark |
 | G6 | 须锁/质押（被动≈0） | **封顶 B** | AERO、Pendle、GMX |
 | G7 | 补贴幻觉（回购 > 1.2× 协议收入） | **封顶 C + 旗** | edgeX(2.8x) |
 | G8 | 价值陷阱 / 净稀释抵消 / 微市值 | **封顶 C + 旗** | GMX、PUMP、OVER |
+
+verdict 取值:confirmed(链上大规模在跑)/ partial(在跑但小、在缩或可随时撤)/ stalled(曾经在跑,现已停;暂用,是否保留待定,不保留则退回 partial 加旗)/ narrative(只有纸面)/ trap(已证伪)/ no-token;股票与封存标的另有 watch(判断待补)。trust_gate 取值:pass(已立)/ watch(未验,不封顶,只触发研究)/ fail(已破)。
 
 地板：`verdict=confirmed`（链上大规模在跑）→ 至少 B；过全部闸门但弱捕获 → D（F 只留给结构性零/骗/背信）。
 

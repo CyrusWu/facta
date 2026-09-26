@@ -6,7 +6,7 @@
 存款人给协议钱（铸稳定币/存金库）→ 协议拿抵押品/策略赚收益 → 收益大头付给**生息凭证持有人**（sUSDe/eUSX 类）→ 「收益给存款人 ≠ 价值给 token 持有人」是本赛道第一陷阱。
 
 ## 2. 冠军基线
-Sky（Smart Burn 真烧全体、~1%、discretionary 且 2026-03 被砍到 surplus 7.5%）。**本赛道没有 immutable 冠军**——这是空缺不是锚点错。挑战者基线：Spark（真回购但进金库）。反面锚：Ethena（纸面开关）、USUAL（trust 崩）、SLX（免费券）。
+Sky(2026-08-13 起按资金瀑布分配:回购的 SKY 约九成发给质押者、一成销毁,销毁腿 2026-09-13 才首次执行;被动持有人只吃销毁腿,约占净收入 4%;discretionary)。**本赛道没有 immutable 冠军**——这是空缺不是锚点错。挑战者基线：Spark（真回购但进金库）。反面锚：Ethena（纸面开关）、USUAL（trust 崩）、SLX（免费券）。
 
 ## 3. 赛道特有指标
 - **Float economics**：不生息部分的供给 × 抵押品收益率 = 隐形收入（Tether/Circle 模型）；它归谁、在哪个法人（SLX：$423M 零息 float 的利息在链下 BVI）。
